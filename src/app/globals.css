@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Paper Theme (Light) */
+  --background: #f3efe6;
+  --foreground: #222222;
+  --accent: #d44b3e;
+  --muted: #888888;
+  --paper-light: #faf7f1;
+  --font-serif: var(--font-playfair-display);
+  --font-sans: var(--font-inter);
 }
 
-@theme inline {
+@theme {
+  /* Override or extend theme here if using CSS-first config */
+  /* We are using tailwind.config.ts mostly, but v4 loves CSS variables */
+  --font-serif: var(--font-playfair-display), serif;
+  --font-sans: var(--font-inter), sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-paper: var(--background);
+  --color-ink: var(--foreground);
+  --color-paper-light: var(--paper-light);
+
+  --image-paper-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  /* Dark Editorial Theme */
+  --background: #0b0b0b;
+  --foreground: #f5f5f5;
+  --accent: #ff4d4d;
+  --muted: #888888;
+  --paper-light: #161616;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* ===== PAPER TEAR OVERLAY ===== */
+#paper-tear {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(#fff, #fff);
+
+  mask-image: url("https://svgshare.com/i/15cN.svg");
+  -webkit-mask-image: url("https://svgshare.com/i/15cN.svg");
+
+  mask-size: 200% 100%;
+  -webkit-mask-size: 200% 100%;
+
+  mask-position: 0% 0%;
+  -webkit-mask-position: 0% 0%;
+}
+
+/* active animation */
+#paper-tear.active {
+  opacity: 1;
+  animation: tearMove 1.2s ease-in-out forwards;
+}
+
+@keyframes tearMove {
+  from {
+    mask-position: 0% 0%;
+    -webkit-mask-position: 0% 0%;
+  }
+
+  to {
+    mask-position: 100% 0%;
+    -webkit-mask-position: 100% 0%;
+  }
+}
+
+/* dark paper */
+[data-theme="dark"] #paper-tear {
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(#0b0b0b, #0b0b0b);
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-vertical {
+  animation: scroll-vertical 20s linear infinite;
+}
+
+.animate-scroll-vertical:hover {
+  animation-play-state: paused;
 }

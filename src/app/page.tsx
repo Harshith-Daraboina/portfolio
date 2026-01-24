@@ -1,65 +1,232 @@
+import { PaperCard } from "@/components/ui/PaperCard";
+import { ProjectFeatureCard } from "@/components/ui/ProjectFeatureCard";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Stamp } from "@/components/ui/Stamp";
+import Link from "next/link";
 import Image from "next/image";
+import { Download, Mail, Github, Linkedin } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
+import { GithubStats } from "@/components/ui/GithubStats";
+import { IssueNumber } from "@/components/ui/IssueNumber";
+import { Footer } from "@/components/Footer";
+import { AnimeSection } from "@/components/AnimeSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-paper font-sans text-ink selection:bg-accent/30 selection:text-ink pb-20">
+      {/* Navigation / Header */}
+      <header className="mb-12">
+        <div className="max-w-6xl mx-auto pt-6 pb-2 px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-serif font-black tracking-tighter mb-4">
+            HARSHITH DE FOLIO
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Sub-header Bar (Sticky) */}
+        <div className="sticky top-0 z-50 transition-shadow">
+          <div className="border-y border-gray-300 py-3 bg-paper/95 backdrop-blur-sm">
+            <div className="max-w-6xl mx-auto px-4 flex justify-between items-center text-xs font-mono tracking-widest uppercase text-muted">
+              <div className="flex gap-8">
+                <IssueNumber />
+                <span className="hidden sm:inline-block">DATE: 25/01/2026</span>
+              </div>
+              <nav className="flex gap-6 font-medium">
+                <Link href="#work" className="hover:text-accent transition-colors">Archive</Link>
+                <Link href="#about" className="hover:text-accent transition-colors">About</Link>
+                <Link href="#contact" className="hover:text-accent transition-colors">Contact</Link>
+                <div className="border-l border-gray-300 dark:border-gray-700 pl-6 ml-2">
+                  <ThemeToggle />
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </header>
+
+      <div className="max-w-6xl mx-auto px-4 mb-32">
+
+        {/* Full Width Hero Section */}
+        <section className="relative pt-8 pb-16 border-b border-gray-300 dark:border-gray-700 mb-12">
+          <div className="absolute top-0 right-0 hidden md:block">
+            <Stamp text="VERIFIED" date="24/01/2026" className="transform rotate-6" />
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8">
+            From Empathy to <span className="bg-accent/10 px-2 italic text-accent">Interface</span>: <br />
+            A Developer's Story.
+          </h1>
+
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="text-lg leading-relaxed font-serif text-ink first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left mb-8">
+                Harshith Daraboina is a B.Tech Computer Science student at IIIT Dharwad with a GPA of 8.02.
+                Leading open-source initiatives at the Microsoft Students Club and building AI-powered platforms, he blends engineering precision with user-centric design.
+              </div>
+              <div className="flex gap-4 mb-8">
+                <a href="/Resume_Harshith_Daraboina.pdf" target="_blank" className="bg-ink text-paper py-3 px-6 font-bold text-sm tracking-widest uppercase hover:bg-accent transition-colors flex items-center justify-center gap-2 shadow-sm">
+                  <Download size={16} /> Resume
+                </a>
+                <a href="mailto:daraboinaharshith2005@gmail.com" className="border border-ink py-3 px-6 font-bold text-sm tracking-widest uppercase hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors flex items-center justify-center gap-2 shadow-sm">
+                  <Mail size={16} /> Contact
+                </a>
+              </div>
+
+              {/* GitHub Stats Integration */}
+              <div className="w-full">
+                <GithubStats />
+              </div>
+            </div>
+
+            <div className="relative max-w-sm mx-auto md:ml-auto md:mr-0 transform rotate-1 transition-transform duration-700 ease-in-out hover:rotate-0 hover:scale-[1.02]">
+              <div className="relative aspect-[4/5] w-full overflow-hidden shadow-lg border-4 border-white/50">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/hero.png"
+                  alt="Portrait of the designer"
+                  className="object-cover w-full h-full opacity-95"
+                />
+                <div className="absolute inset-0 bg-paper-texture opacity-20 pointer-events-none mix-blend-multiply"></div>
+              </div>
+
+              {/* Stamp Overlay */}
+              <div className="absolute -top-6 -left-6 z-20 transition-transform duration-500 hover:rotate-12">
+                <Stamp text="DESIGNER" date="EST. 2020" className="-rotate-12 border-ink text-ink" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+          {/* Left Column: Projects */}
+          <div className="lg:col-span-8">
+            <section id="work">
+              <SectionHeading>Selected Works</SectionHeading>
+              <div className="space-y-12">
+                {/* Attrangi */}
+                <ProjectFeatureCard
+                  title="Attrangi"
+                  subtitle="AI Video Platform"
+                  description="Built a lightweight video conferencing platform optimized for small rooms. Enabled unlimited meeting rooms with low-latency and integrated AI capabilities for smart noise suppression and automated insights."
+                  tags={["Next.js", "WebRTC", "AI Insights"]}
+                  image="/attrangi_meet.png"
+                  year="2024"
+                />
+
+                {/* Pragya */}
+                <ProjectFeatureCard
+                  title="Pragya AI"
+                  subtitle="Emotional Chatbot"
+                  description="Developed an emotionally aware mental health chatbot using a NeuroEngine to guide conversations. Implemented facial expression logic and a RAG system using FAISS over a PDF knowledge base."
+                  tags={["FastAPI", "LangChain", "Groq LLM"]}
+                  image="/pragya_ai.png"
+                  year="2025"
+                />
+
+                {/* Solar Power */}
+                <ProjectFeatureCard
+                  title="Solar AI"
+                  subtitle="Power Prediction"
+                  description="Built ML models using Python and scikit-learn achieving 92% prediction accuracy. Integrated real-time weather data for dynamic solar forecasting and created interactive Dashboards."
+                  tags={["scikit-learn", "Python", "Plotly"]}
+                  image="/solar_prediction.png"
+                  year="2023"
+                />
+              </div>
+            </section>
+          </div>
+
+          {/* Right Column: Resume Details */}
+          <div className="lg:col-span-4 space-y-12 lg:border-l lg:border-gray-300 lg:pl-12">
+
+            {/* Technical Skills */}
+            <section>
+              <h4 className="font-sans font-bold uppercase tracking-widest text-sm mb-6 border-b border-gray-300 pb-2">Technical Skills</h4>
+              <div className="space-y-6">
+                <div>
+                  <h5 className="font-serif font-bold mb-1 text-base">Languages</h5>
+                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                    C++, C, JavaScript, TypeScript, Python, Java
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-serif font-bold mb-1 text-base">Frontend</h5>
+                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                    React.js, Next.js, React Native, Vue.js, Tailwind CSS, Material UI
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-serif font-bold mb-1 text-base">Backend & Cloud</h5>
+                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                    Node.js, Express, FastAPI, PostgreSQL, MongoDB, Prisma, AWS, Docker
+                  </p>
+                </div>
+                <div>
+                  <h5 className="font-serif font-bold mb-1 text-base">Machine Learning</h5>
+                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                    scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Experience */}
+            <section>
+              <h4 className="font-sans font-bold uppercase tracking-widest text-sm mb-6 border-b border-gray-300 pb-2">Experience</h4>
+              <ul className="space-y-6">
+                <li className="group cursor-default">
+                  <div className="flex justify-between items-baseline mb-1">
+                    <div className="font-bold group-hover:text-accent transition-colors">Microsoft Students Club</div>
+                  </div>
+                  <div className="text-xs text-muted mb-2 uppercase tracking-wide">Lead (Open Source)</div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Leading open-source initiatives and mentoring students in full-stack development.
+                  </p>
+                </li>
+                <li className="group cursor-default">
+                  <div className="flex justify-between items-baseline mb-1">
+                    <div className="font-bold group-hover:text-accent transition-colors">GDSC IIIT Dharwad</div>
+                  </div>
+                  <div className="text-xs text-muted mb-2 uppercase tracking-wide">Web Developer</div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Developed web apps at GDSC. Built responsive UI components improving engagement.
+                  </p>
+                </li>
+                <li className="group cursor-default">
+                  <div className="flex justify-between items-baseline mb-1">
+                    <div className="font-bold group-hover:text-accent transition-colors">Career Guidance Cell</div>
+                  </div>
+                  <div className="text-xs text-muted mb-2 uppercase tracking-wide">Member</div>
+                </li>
+              </ul>
+            </section>
+
+            {/* Education */}
+            <section>
+              <h4 className="font-sans font-bold uppercase tracking-widest text-sm mb-6 border-b border-gray-300 pb-2">Education</h4>
+              <ul className="space-y-4">
+                <li className="group cursor-default">
+                  <div className="font-bold group-hover:text-accent transition-colors">IIIT Dharwad</div>
+                  <div className="text-xs text-muted uppercase tracking-wide mb-1">B.Tech Computer Science</div>
+                  <div className="text-xs font-mono">GPA: 8.02</div>
+                </li>
+              </ul>
+            </section>
+
+            <div className="mt-12 p-8 border border-dashed border-gray-400 text-center opacity-70">
+              <p className="font-serif italic text-sm mb-2">"Sketching trust into every interaction."</p>
+              <div className="flex justify-center gap-4 mt-4">
+                <a href="#" className="hover:text-accent transition-colors"><Github size={18} /></a>
+                <a href="#" className="hover:text-accent transition-colors"><Linkedin size={18} /></a>
+                <a href="mailto:daraboinaharshith2005@gmail.com" className="hover:text-accent transition-colors"><Mail size={18} /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <AnimeSection />
+      <Footer />
+    </main>
   );
 }
