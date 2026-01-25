@@ -25,19 +25,19 @@ export function AnimeSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         <StampFrame label="PIRATE KING" year="1999" className="transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                             <div className="w-full h-full relative">
-                                <Image src="/anime/onepiece.jpg" alt="One Piece" fill className="object-cover" />
+                                <Image src="/anime/onepiece.png" alt="One Piece" fill className="object-cover" />
                             </div>
                         </StampFrame>
 
                         <StampFrame label="SOUL REAPER" year="2004" className="transform rotate-2 hover:rotate-0 transition-transform duration-300">
                             <div className="w-full h-full relative">
-                                <Image src="/anime/bleach.jpg" alt="Bleach" fill className="object-cover" />
+                                <Image src="/anime/bleach.png" alt="Bleach" fill className="object-cover" />
                             </div>
                         </StampFrame>
 
                         <StampFrame label="STRUGGLER" year="1997" className="transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                             <div className="w-full h-full relative">
-                                <Image src="/anime/berserk.jpg" alt="Berserk" fill className="object-cover" />
+                                <Image src="/anime/berserk.png" alt="Berserk" fill className="object-cover" />
                             </div>
                         </StampFrame>
                     </div>
@@ -66,37 +66,37 @@ export function AnimeSection() {
                             <div className="space-y-4 px-4 animate-scroll-vertical absolute top-0 left-0 w-full">
                                 {/* Original Set */}
                                 <div className="aspect-video bg-[#e8e4db] p-1 rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/sololeveling.jpg" alt="Solo Leveling" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/sololeveling.png" alt="Solo Leveling" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Solo Leveling</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 -rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/fma.jpg" alt="FMA" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/fma.png" alt="FMA" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">FMA: Brotherhood</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/deathnote.jpg" alt="Death Note" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/deathnote.png" alt="Death Note" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Death Note</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 -rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/aot.jpg" alt="AOT" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/aot.png" alt="AOT" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Attack on Titan</div>
                                 </div>
 
                                 {/* Duplicate Set for Seamless Loop */}
                                 <div className="aspect-video bg-[#e8e4db] p-1 rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/sololeveling.jpg" alt="Solo Leveling" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/sololeveling.png" alt="Solo Leveling" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Solo Leveling</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 -rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/fma.jpg" alt="FMA" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/fma.png" alt="FMA" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">FMA: Brotherhood</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/deathnote.jpg" alt="Death Note" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/deathnote.png" alt="Death Note" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Death Note</div>
                                 </div>
                                 <div className="aspect-video bg-[#e8e4db] p-1 -rotate-1 relative overflow-hidden group mb-4">
-                                    <Image src="/anime/aot.jpg" alt="AOT" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+                                    <Image src="/anime/aot.png" alt="AOT" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-[8px] p-1 uppercase tracking-widest text-center">Attack on Titan</div>
                                 </div>
                             </div>

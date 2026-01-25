@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Stamp } from "@/components/ui/Stamp";
 import Link from "next/link";
 import Image from "next/image";
-import { Download, Mail, Github, Linkedin } from "lucide-react";
+import { Download, Mail, Github, Linkedin, Instagram } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { GithubStats } from "@/components/ui/GithubStats";
 import { IssueNumber } from "@/components/ui/IssueNumber";
@@ -31,7 +31,7 @@ export default function Home() {
                 <span className="hidden sm:inline-block">DATE: 25/01/2026</span>
               </div>
               <nav className="flex gap-6 font-medium">
-                <Link href="#work" className="hover:text-accent transition-colors">Archive</Link>
+                <Link href="/archive" className="hover:text-accent transition-colors">Archive</Link>
                 <Link href="#about" className="hover:text-accent transition-colors">About</Link>
                 <Link href="#contact" className="hover:text-accent transition-colors">Contact</Link>
                 <div className="border-l border-gray-300 dark:border-gray-700 pl-6 ml-2">
@@ -46,7 +46,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-4 mb-32">
 
         {/* Full Width Hero Section */}
-        <section className="relative pt-8 pb-16 border-b border-gray-300 dark:border-gray-700 mb-12">
+        <section id="about" className="relative pt-8 pb-16 border-b border-gray-300 dark:border-gray-700 mb-12">
           <div className="absolute top-0 right-0 hidden md:block">
             <Stamp text="VERIFIED" date="24/01/2026" className="transform rotate-6" />
           </div>
@@ -217,8 +217,9 @@ export default function Home() {
             <div className="mt-12 p-8 border border-dashed border-gray-400 text-center opacity-70">
               <p className="font-serif italic text-sm mb-2">"Sketching trust into every interaction."</p>
               <div className="flex justify-center gap-4 mt-4">
-                <a href="#" className="hover:text-accent transition-colors"><Github size={18} /></a>
-                <a href="#" className="hover:text-accent transition-colors"><Linkedin size={18} /></a>
+                <a href="https://github.com/Harshith-Daraboina" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Github size={18} /></a>
+                <a href="https://www.linkedin.com/in/harshith-daraboina" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Linkedin size={18} /></a>
+                <a href="https://www.instagram.com/harsh_ith_011/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Instagram size={18} /></a>
                 <a href="mailto:daraboinaharshith2005@gmail.com" className="hover:text-accent transition-colors"><Mail size={18} /></a>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { Stamp } from "@/components/ui/Stamp";
 
 export function Footer() {
     return (
-        <footer className="w-full bg-[#f3efe6] dark:bg-[#0b0b0b] text-[#222222] dark:text-[#f5f5f5] pt-12 pb-8 px-4 md:px-8 mt-20 transition-colors duration-500">
+        <footer id="contact" className="w-full bg-[#f3efe6] dark:bg-[#0b0b0b] text-[#222222] dark:text-[#f5f5f5] pt-12 pb-8 px-4 md:px-8 mt-20 transition-colors duration-500">
             <div className="max-w-7xl mx-auto">
                 {/* Top Border Decoration - Matching Bottom */}
                 <div className="w-full h-[2px] bg-[#222222] dark:bg-[#444] mb-1"></div>
@@ -114,13 +114,13 @@ export function Footer() {
                             </p>
 
                             <div className="flex gap-6 items-center">
-                                <a href="#" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
+                                <a href="https://www.linkedin.com/in/harshith-daraboina" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
                                     <Linkedin size={16} /> <span className="hidden sm:inline">LinkedIn</span>
                                 </a>
-                                <a href="#" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
+                                <a href="https://www.instagram.com/harsh_ith_011/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
                                     <Instagram size={16} /> <span className="hidden sm:inline">Instagram</span>
                                 </a>
-                                <a href="#" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
+                                <a href="https://github.com/Harshith-Daraboina" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-bold text-xs uppercase tracking-widest hover:text-accent transition-colors">
                                     <Github size={16} /> <span className="hidden sm:inline">Github</span>
                                 </a>
                             </div>
