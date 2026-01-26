@@ -112,6 +112,7 @@ export default function Home() {
                   tags={["Next.js", "WebRTC", "AI Insights"]}
                   image="/attrangi_meet.png"
                   year="2024"
+                  link="https://meet-heyattrangi.vercel.app/"
                 />
 
                 {/* Pragya */}
@@ -122,6 +123,7 @@ export default function Home() {
                   tags={["FastAPI", "LangChain", "Groq LLM"]}
                   image="/pragya_ai.png"
                   year="2025"
+                  link="https://bot-heyattrangi.vercel.app/"
                 />
 
                 {/* Solar Power */}
@@ -132,6 +134,7 @@ export default function Home() {
                   tags={["scikit-learn", "Python", "Plotly"]}
                   image="/solar_prediction.png"
                   year="2023"
+                  link="https://github.com/Harshith-Daraboina/h4i/"
                 />
               </div>
             </section>

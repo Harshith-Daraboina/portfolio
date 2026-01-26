@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,7 @@ interface ProjectFeatureCardProps {
     image: string;
     year?: string;
     featured?: boolean;
+    link?: string;
 }
 
 export function ProjectFeatureCard({
@@ -21,13 +23,14 @@ export function ProjectFeatureCard({
     image,
     year = "2026",
     featured = true,
+    link,
 }: ProjectFeatureCardProps) {
-    return (
-        <div className="bg-[#f3efe6] dark:bg-[#161616] p-8 border border-stone-200 dark:border-stone-800 overflow-hidden relative group hover:shadow-lg transition-shadow duration-300">
+    const Content = () => (
+        <div className="bg-[#f3efe6] dark:bg-[#161616] p-8 border border-stone-200 dark:border-stone-800 overflow-hidden relative group hover:shadow-lg transition-shadow duration-300 h-full">
             {/* Background Texture Overlay */}
             <div className="absolute inset-0 bg-paper-texture opacity-20 pointer-events-none mix-blend-multiply"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center relative z-10 h-full">
 
                 {/* Left: Main Image */}
                 <div className="relative w-full">
@@ -66,7 +69,7 @@ export function ProjectFeatureCard({
                     </div>
 
                     {/* Title */}
-                    <h2 className="font-serif text-3xl md:text-4xl font-black leading-tight text-[#111] dark:text-[#f5f5f5] mb-3 uppercase tracking-tight">
+                    <h2 className="font-serif text-3xl md:text-4xl font-black leading-tight text-[#111] dark:text-[#f5f5f5] mb-3 uppercase tracking-tight group-hover:text-accent transition-colors">
                         {title}
                     </h2>
 
@@ -91,4 +94,14 @@ export function ProjectFeatureCard({
             </div>
         </div>
     );
+
+    if (link) {
+        return (
+            <Link href={link} target="_blank" className="block h-full no-underline">
+                <Content />
+            </Link>
+        );
+    }
+
+    return <Content />;
 }
