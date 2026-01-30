@@ -18,7 +18,7 @@ export function SectionHeading({ children, className, align = "left", ...props }
             >
                 {children}
                 {/* Underline Style */}
-                <span className="absolute left-0 bottom-1 w-full h-3 bg-accent/20 -z-10 -rotate-1 skew-x-12 transform scale-x-105"></span>
+                <span className="absolute left-0 bottom-1 w-full h-3 bg-accent/20 dark:bg-accent/30 -z-10 -rotate-1 skew-x-12 transform scale-x-105"></span>
             </h2>
         </div>
     );

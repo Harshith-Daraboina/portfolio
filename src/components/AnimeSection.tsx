@@ -4,7 +4,7 @@ import { StampFrame } from "@/components/ui/StampFrame";
 
 export function AnimeSection() {
     return (
-        <section className="w-full bg-[#e8e4db] dark:bg-[#111] text-[#222222] dark:text-[#e6dfd5] py-20 px-4 md:px-8 border-t border-[#ccc] dark:border-[#333]">
+        <section className="w-full bg-[#e8e4db] dark:bg-[#0b0b0b] text-[#222222] dark:text-[#e6dfd5] py-20 px-4 md:px-8 border-t border-[#ccc] dark:border-stone-800">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
 
                 {/* Left Content Area: 9 cols */}
@@ -44,18 +44,18 @@ export function AnimeSection() {
                 </div>
 
                 {/* Right Sidebar: Film Strip - 3 cols */}
-                <div className="lg:col-span-3 flex flex-col justify-center relative h-[600px] overflow-hidden">
+                <div className="lg:col-span-3 flex flex-col justify-center relative h-[400px] lg:h-[600px] overflow-hidden">
                     {/* Film Strip Container */}
-                    <div className="bg-[#222] p-4 rounded-sm shadow-xl relative h-full flex flex-col">
+                    <div className="bg-[#222] dark:bg-[#1a1a1a] p-4 rounded-sm shadow-xl relative h-full flex flex-col dark:border dark:border-stone-700">
                         {/* Sprocket Holes Left */}
-                        <div className="absolute left-0 top-0 bottom-0 w-6 flex flex-col gap-4 py-2 bg-[#222] z-20">
+                        <div className="absolute left-0 top-0 bottom-0 w-6 flex flex-col gap-4 py-2 bg-[#222] dark:bg-[#1a1a1a] z-20">
                             {Array.from({ length: 30 }).map((_, i) => (
                                 <div key={i} className="w-3 h-4 bg-[#e8e4db] mx-auto rounded-sm opacity-80"></div>
                             ))}
                         </div>
 
                         {/* Sprocket Holes Right */}
-                        <div className="absolute right-0 top-0 bottom-0 w-6 flex flex-col gap-4 py-2 bg-[#222] z-20">
+                        <div className="absolute right-0 top-0 bottom-0 w-6 flex flex-col gap-4 py-2 bg-[#222] dark:bg-[#1a1a1a] z-20">
                             {Array.from({ length: 30 }).map((_, i) => (
                                 <div key={i} className="w-3 h-4 bg-[#e8e4db] mx-auto rounded-sm opacity-80"></div>
                             ))}

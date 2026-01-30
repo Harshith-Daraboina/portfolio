@@ -26,7 +26,7 @@ export function ProjectFeatureCard({
     link,
 }: ProjectFeatureCardProps) {
     const Content = () => (
-        <div className="bg-[#f3efe6] dark:bg-[#161616] p-8 border border-stone-200 dark:border-stone-800 overflow-hidden relative group hover:shadow-lg transition-shadow duration-300 h-full">
+        <div className="bg-[#f3efe6] dark:bg-[#1e1e1e] p-6 md:p-8 border border-stone-200 dark:border-stone-700 overflow-hidden relative group hover:shadow-lg transition-shadow duration-300 h-full">
             {/* Background Texture Overlay */}
             <div className="absolute inset-0 bg-paper-texture opacity-20 pointer-events-none mix-blend-multiply"></div>
 
@@ -69,7 +69,7 @@ export function ProjectFeatureCard({
                     </div>
 
                     {/* Title */}
-                    <h2 className="font-serif text-3xl md:text-4xl font-black leading-tight text-[#111] dark:text-[#f5f5f5] mb-3 uppercase tracking-tight group-hover:text-accent transition-colors">
+                    <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-black leading-tight text-[#111] dark:text-[#f5f5f5] mb-3 uppercase tracking-tight group-hover:text-accent transition-colors">
                         {title}
                     </h2>
 

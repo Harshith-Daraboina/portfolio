@@ -15,12 +15,13 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-paper font-sans text-ink selection:bg-accent/30 selection:text-ink pb-20">
       {/* Navigation / Header */}
-      <header className="mb-12">
-        <div className="max-w-6xl mx-auto pt-6 pb-2 px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif font-black tracking-tighter mb-4">
+      <header className="mb-12 w-full !bg-black dark:!bg-transparent !text-white dark:!text-inherit transition-colors duration-300">
+        <div className="max-w-6xl mx-auto py-6 px-4 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-black tracking-tighter">
             HARSHITH DE FOLIO
           </h1>
         </div>
+
 
         {/* Sub-header Bar (Sticky) */}
         <div className="sticky top-0 z-50 transition-shadow">
@@ -30,11 +31,11 @@ export default function Home() {
                 <IssueNumber />
                 <span className="hidden sm:inline-block">DATE: 25/01/2026</span>
               </div>
-              <nav className="flex gap-6 font-medium">
+              <nav className="flex gap-3 sm:gap-6 font-medium text-[10px] sm:text-xs items-center">
                 <Link href="/archive" className="hover:text-accent transition-colors">Archive</Link>
                 <Link href="#about" className="hover:text-accent transition-colors">About</Link>
                 <Link href="#contact" className="hover:text-accent transition-colors">Contact</Link>
-                <div className="border-l border-gray-300 dark:border-gray-700 pl-6 ml-2">
+                <div className="border-l border-gray-300 dark:border-gray-700 pl-3 sm:pl-6 ml-1 sm:ml-2">
                   <ThemeToggle />
                 </div>
               </nav>
@@ -51,14 +52,14 @@ export default function Home() {
             <Stamp text="VERIFIED" date="24/01/2026" className="transform rotate-6" />
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-8">
             From Empathy to <span className="bg-accent/10 px-2 italic text-accent">Interface</span>: <br />
             A Developer's Story.
           </h1>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="text-lg leading-relaxed font-serif text-ink first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left mb-8">
+              <div className="text-base sm:text-lg leading-relaxed font-serif text-ink first-letter:text-4xl sm:first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left mb-8">
                 Harshith Daraboina is a B.Tech Computer Science student at IIIT Dharwad with a GPA of 8.02.
                 Leading open-source initiatives at the Microsoft Students Club and building AI-powered platforms, he blends engineering precision with user-centric design.
               </div>
@@ -72,7 +73,7 @@ export default function Home() {
               </div>
 
               {/* GitHub Stats Integration */}
-              <div className="w-full">
+              <div className="w-full hidden md:block">
                 <GithubStats />
               </div>
             </div>
@@ -141,7 +142,7 @@ export default function Home() {
           </div>
 
           {/* Right Column: Resume Details */}
-          <div className="lg:col-span-4 space-y-12 lg:border-l lg:border-gray-300 lg:pl-12">
+          <div className="lg:col-span-4 space-y-12 border-t pt-12 lg:pt-0 lg:border-t-0 lg:border-l border-gray-300 lg:pl-12">
 
             {/* Technical Skills */}
             <section>
@@ -149,25 +150,25 @@ export default function Home() {
               <div className="space-y-6">
                 <div>
                   <h5 className="font-serif font-bold mb-1 text-base">Languages</h5>
-                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-mono text-xs">
                     C++, C, JavaScript, TypeScript, Python, Java
                   </p>
                 </div>
                 <div>
                   <h5 className="font-serif font-bold mb-1 text-base">Frontend</h5>
-                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-mono text-xs">
                     React.js, Next.js, React Native, Vue.js, Tailwind CSS, Material UI
                   </p>
                 </div>
                 <div>
                   <h5 className="font-serif font-bold mb-1 text-base">Backend & Cloud</h5>
-                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-mono text-xs">
                     Node.js, Express, FastAPI, PostgreSQL, MongoDB, Prisma, AWS, Docker
                   </p>
                 </div>
                 <div>
                   <h5 className="font-serif font-bold mb-1 text-base">Machine Learning</h5>
-                  <p className="text-sm text-gray-600 leading-relaxed font-mono text-xs">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-mono text-xs">
                     scikit-learn, TensorFlow, Pandas, NumPy, Matplotlib
                   </p>
                 </div>
@@ -183,7 +184,7 @@ export default function Home() {
                     <div className="font-bold group-hover:text-accent transition-colors">Microsoft Students Club</div>
                   </div>
                   <div className="text-xs text-muted mb-2 uppercase tracking-wide">Lead (Open Source)</div>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                     Leading open-source initiatives and mentoring students in full-stack development.
                   </p>
                 </li>
@@ -192,7 +193,7 @@ export default function Home() {
                     <div className="font-bold group-hover:text-accent transition-colors">GDSC IIIT Dharwad</div>
                   </div>
                   <div className="text-xs text-muted mb-2 uppercase tracking-wide">Web Developer</div>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                     Developed web apps at GDSC. Built responsive UI components improving engagement.
                   </p>
                 </li>
