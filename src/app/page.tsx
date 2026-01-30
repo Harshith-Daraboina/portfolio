@@ -60,7 +60,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
               <div className="text-base sm:text-lg leading-relaxed font-serif text-ink first-letter:text-4xl sm:first-letter:text-5xl first-letter:font-bold first-letter:mr-2 first-letter:float-left mb-8">
-                Harshith Daraboina is a B.Tech Computer Science student at IIIT Dharwad with a GPA of 8.02.
+                Harshith Daraboina is a Computer Science student at IIIT Dharwad.
                 Leading open-source initiatives at the Microsoft Students Club and building AI-powered platforms, he blends engineering precision with user-centric design.
               </div>
               <div className="flex gap-4 mb-8">
@@ -213,7 +213,7 @@ export default function Home() {
                 <li className="group cursor-default">
                   <div className="font-bold group-hover:text-accent transition-colors">IIIT Dharwad</div>
                   <div className="text-xs text-muted uppercase tracking-wide mb-1">B.Tech Computer Science</div>
-                  <div className="text-xs font-mono">GPA: 8.02</div>
+
                 </li>
               </ul>
             </section>

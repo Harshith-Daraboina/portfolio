@@ -16,7 +16,9 @@ export const metadata: Metadata = {
   title: "Harshith Daraboina | Portfolio",
   description: "Computer Science Engineer & Full Stack Developer",
   icons: {
-    icon: "/logo.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   verification: {
     google: "ZtPg76lIVz7gFpIiPlaVBUVCwGhl5qmINSOqty38OFU",
